@@ -141,16 +141,6 @@ window.addEventListener("load", function () {
 });
 
 document.addEventListener("DOMContentLoaded", function () {
-  var audio = document.getElementById("bg-music");
-  // Try to play immediately
-  audio.play().catch(function () {
-    // If autoplay is blocked, play on first user interaction
-    var playMusic = function () {
-      audio.play();
-      document.removeEventListener("click", playMusic);
-      document.removeEventListener("touchstart", playMusic);
-    };
-    document.addEventListener("click", playMusic);
-    document.addEventListener("touchstart", playMusic);
-  });
+  const audio = document.getElementById("bg-music");
+  audio.play();
 });
