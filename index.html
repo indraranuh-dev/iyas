@@ -144,21 +144,20 @@
             <div x-show="screen === 'final'" x-transition
                 class="absolute inset-x-0 p-6 sm:p-8 text-center bg-white rounded-2xl shadow-2xl flex flex-col items-center justify-center"
                 x-data="{ 
-                    finalParagraphs: [
-                        `Sayangku, mengingat perjalanan 8 tahun yang penuh warna...`,
-                        `Terima kasih, cintaku, sudah dengan setia menemaniku...`,
-                        `Di hari yang paling spesial ini, ku panjatkan doa terbaik...`,
-                        `Selamat ulang tahun, belahan jiwaku, permata hatiku...`
-                    ],
-                    finalStep: 0,
-                    confettiLaunched: false
+                    finalParagraphs: [ 
+                        'Sayangku, mengingat perjalanan 8 tahun yang penuh warna, dengan segala tawa, rindu, dan penantian, setiap momen terasa begitu berharga. Dan kini, hampir 2 tahun kita rajut kisah cinta ini, aku menyadari betapa beruntungnya diriku memilikimu.',
+                        'Terima kasih, cintaku, sudah dengan setia menemaniku, menjadi pelabuhan hatiku, dan mau melangkah dalam petualangan kecil ini bersamaku. Setiap jejak langkahmu adalah anugerah terindah. Aku harap kejutan kecil ini dapat menghangatkan hatimu, seperti kamu yang selalu menghangatkan duniaku.',
+                        'Di hari yang paling spesial ini, ku panjatkan doa terbaik agar hidupmu selalu dipenuhi kebahagiaan yang tak terhingga, cinta yang tak pernah padam, dan tawa renyah yang selalu mewarnai setiap detikmu.',
+                        'Selamat ulang tahun, belahan jiwaku, permata hatiku, bidadariku, istrikuuuu! Ketahuilah, aku akan selalu ada di sampingmu, menggenggam erat tanganmu, melalui suka dan duka, kini dan selamanya. I love you so much, my everything. 💖'
+                    ], 
+                    finalStep: 0 
                 }" x-effect="finalStep === finalParagraphs.length - 1 ? launchConfetti() : false">
 
                 <h1 class="mb-4 text-3xl sm:text-4xl lg:text-5xl font-bold text-rose-500 font-cursive">
                     Selamat Ulang Tahun, Cintakuuuuu!
                 </h1>
                 <img src="./assets/images/kita.jpeg" alt="Cute Celebration"
-                    class="mx-auto my-4 w-40 sm:w-56 md:w-64 rounded-lg object-cover">
+                    class="mx-auto my-4 w-full max-w-64 rounded-lg object-cover">
 
                 <template x-for="(para, idx) in finalParagraphs" :key="idx">
                     <p x-show="finalStep === idx"
