@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+    style="display: block; margin-left: auto; margin-right: auto; width: 4rem; height: 4rem; color: #f43f5e;">
+    <style>
+        @keyframes heartbeat-favicon {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            10%,
+            30%,
+            50%,
+            70%,
+            90% {
+                transform: scale(1.1);
+            }
+
+            20%,
+            40%,
+            60%,
+            80% {
+                transform: scale(0.95);
+            }
+        }
+
+        .heartbeat {
+            transform-origin: 50% 60%;
+            animation: heartbeat-favicon 1s infinite;
+        }
+    </style>
+    <g class="heartbeat">
+        <path
+            d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+    </g>
+</svg>
