@@ -142,5 +142,16 @@ window.addEventListener("load", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   const audio = document.getElementById("bg-music");
-  audio.play();
+
+  // Fungsi untuk mencoba memutar audio setelah interaksi user
+  function tryPlayAudio() {
+    audio.play().catch(() => {
+      // Jika gagal, tunggu interaksi user berikutnya
+      document.body.addEventListener("click", tryPlayAudio, { once: true });
+      document.body.addEventListener("keydown", tryPlayAudio, { once: true });
+    });
+  }
+
+  // Coba play saat DOMContentLoaded, jika gagal tunggu interaksi user
+  tryPlayAudio();
 });
