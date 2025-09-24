@@ -32,7 +32,7 @@ function journeyApp() {
         question: "Apa makanan favoritku yang sering aku ceritain ke kamu?",
         options: [
           { text: "Bakso", correct: false },
-          { text: "Pak Pur", correct: false },
+          { text: "Pak Poer", correct: false },
           { text: "Gacoan", correct: true },
           { text: "Bebek Madura", correct: false },
         ],
